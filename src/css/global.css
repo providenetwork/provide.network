@@ -1,0 +1,10 @@
+body {
+  font-family: 'Roboto Mono', monospace;
+  position: relative;
+}
+p {
+  color: #042D40;
+}
+section {
+  padding: 50px 0;
+}

@@ -1,0 +1,153 @@
+{
+  "nav": [
+    {
+      "links": [
+        {
+          "text": "About",
+          "href": "#about",
+          "class": "nav-link"
+        },
+        {
+          "text": "Events",
+          "href": "#events",
+          "class": "nav-link"
+        },
+        {
+          "text": "Solutions",
+          "href": "#solutions",
+          "class": "nav-link"
+        },
+        {
+          "text": "Team",
+          "href": "#team",
+          "class": "nav-link"
+        },
+        {
+          "text": "Join ICO",
+          "href": "https://",
+          "class": "btn btn-outline-light"
+        }
+      ]
+    }
+  ],
+  "hero": [
+    {
+      "mainHeading": "provide.network",
+      "subHeading" : "We simplify the building and scaling of best-of-breed blockchain applications to help businesses fully realize the disruptive potential of blockchain technology."
+    }
+  ],
+  "about": [
+    {
+      "heading": "About",
+      "subHeading": "Out Mission",
+      "highlights": [
+        {
+          "heading": "Turnkey",
+          "detail": "Application creation and smart contract deployment on our platform",
+          "href": "#"
+        },
+        {
+          "heading": "Scalable",
+          "detail": "Take advantage of blockchain tech without losing transaction processing speed",
+          "href": "#"
+        },
+        {
+          "heading": "Enterprise-grade",
+          "detail": "Modern developer experience with easy to understand APIs for rapid deployment",
+          "href": "#"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "heading" : "Events",
+      "subHeading" : "We hope to see you at one of these exciting community events.",
+      "events": [
+        {
+          "heading": "ETHAtl",
+          "subHeading" : "Join us in Atlanta for ETHAtl, the enterprise blockchain hackathon.",
+          "imageUrl": "https://slide.ly/promo/share/5ac0a72e76e0df2e277b23c6",
+          "date": "June 2018 (exact date TBA)"
+        }
+      ]
+    }
+  ],
+  "cardViews": [
+    [
+        {
+            "tabText": "Solutions",
+            "heading": "Blockchain tech is currently unapproachable for most teams",
+            "content": "Many companies see the value of blockchain but are limited by the fact that current blockchain technology is not scalable. For example, many people would be surprised to know that the Bitcoin network cannot handle more than 7 transactions/sec and the Ethereum network only offers a slight improvement of 25 transactions/sec. Many companies continue to investigate blockchain, often on a one-off basis trying to improve performance. Many companies are also realizing the learning curve is nearly vertical for development teams, and with several, recent, high profile hacks, there is an element of uncertainty about security."
+        },
+        {
+            "tabText": "Security",
+            "heading": "Make it secure",
+            "content": "Provide safeguards cryptographic material for an application’s users (i.e., private keys required to sign transactions). We recognize that there is an absolute need to ensure the security of all of our users data. To that end, we have implemented cutting-edge protocols and security measures that protect user data from external attacks. We do this by utilizing the blockchain's innately robust security and coupling it with some of our own proprietary security measures to deliver excellent protection against external threats."
+        },
+        {
+            "tabText": "Scalability",
+            "heading": "Make it scalable",
+            "content": "Provide approaches scalability by exposing a scalable protocol abstraction for interacting with public or permissioned blockchain networks using a modern developer experience and easy to understand APIs. This makes building, deploying and running best-of-breed blockchain applications “Twilio-easy” for developers who have no prior blockchain experience. Applications can be configured to leverage existing networks, coalesce transactions into batches dramatically reducing costs, and new private networks can be configured via the UI and deployed to on-premise or public cloud infrastructure."
+        },
+        {
+            "tabText": "Simplicity",
+            "heading": "Make it simple",
+            "content": "Perhaps the most attractive feature is our method for simplifying the building and deploying of apps on our platform. We have solved the barrier to entry challenge by doing most of the heavy lifting through our interface. Many of the most complicated aspects of smart contract deployment have been reduced to 'point and click' while others might be a slightly more complex process of copy / paste. If you can breathe and write code at the same time, you're going to love what we have to offer."
+        }
+    ]
+  ],
+  "team": [
+    {
+      "enabled": false,
+      "heading": "Team",
+      "subHeading": "",
+      "members": [
+        {
+            "name": null,
+            "title": null,
+            "description": null,
+            "linkedinHref": null,
+            "githubHref": null,
+            "mediumHref": null,
+            "twitterHref": null
+        }
+      ]
+    }
+  ],
+  "contact": [
+    {
+      "socialMedia": [
+        {
+          "icon": "<i class='fab fa-twitter-f'></i>",
+          "href": "https://twitter.com/provide.network"
+        },
+        {
+          "icon": "<i class='fab fa-medium-f'></i>",
+          "href": "https://medium.com/@provide"
+        },
+        {
+          "icon": "<i class='fab fa-github-f'></i>",
+          "href": "https://github.com/providenetwork"
+        },
+        {
+          "icon": "<i class='fab fa-telegram-f'></i>",
+          "href": "https://t.me/joinchat/GXp2vFNWuJb0LW7G7rgfWA"
+        }
+      ],
+      "address": "<i class='fas fa-map-marker'></i>&nbsp;Atlanta, GA",
+      "email": "hello@provide.network",
+      "mailto": "mailto:hello@provide.network",
+      "phone": null,
+      "tel": null,
+      "allowEmailSubscriptions": true,
+      "subscriptionHeading": "Newsletter",
+      "subscriptionSubHeading": "Stay updated on network news."
+    }
+  ],
+  "footer": [
+    {
+      "copyright": "Copyright © 2018 Provide Technologies Inc. All rights reserved."
+    }
+  ]
+}

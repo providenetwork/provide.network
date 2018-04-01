@@ -1,0 +1,55 @@
+.features {
+  background-color: rgba(4, 45, 64, 0.25);
+}
+.features .container .top {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.features .container .top h4,
+.features .container .top h3 {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #042D40;
+}
+.features .container .row .col-12 .card {
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+@media (max-width: 991px) {
+  .features .container .row .col-12 .card {
+    margin-bottom: 2rem;
+  }
+}
+.features .container .row .col-12 .card:before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  color: #042D40;
+  background: -moz-linear-gradient(to bottom, #042d40, #0d3d53, #174d67, #205e7c, #2a7091);
+  background: -webkit-linear-gradient(to bottom, #042d40, #0d3d53, #174d67, #205e7c, #2a7091);
+  background: linear-gradient(to bottom, #042d40, #0d3d53, #174d67, #205e7c, #2a7091);
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.features .container .row .col-12 .card:hover {
+  transform: translateY(-3px);
+  -moz-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+}
+.features .container .row .col-12 .card .card-body .content .content-text h4 {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  color: #042D40;
+  letter-spacing: 1px;
+}
+.features .container .row .col-12 .card .card-body .content .content-text p {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  color: #2A7091;
+}

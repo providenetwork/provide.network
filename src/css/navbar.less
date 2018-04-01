@@ -1,0 +1,83 @@
+@import url("variables.less");
+@import url("mixins.less");
+
+.navigation {
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+
+  &.is-scrolling, &.menu-is-open{
+    background-color: @darkcolor;
+    background: -moz-linear-gradient(to right bottom, #042d40, #0d3d53, #174d67, #205e7c, #2a7091);
+    background: -webkit-linear-gradient(to right bottom, #042d40, #0d3d53, #174d67, #205e7c, #2a7091);
+    background: linear-gradient(to right bottom, #042d40, #0d3d53, #174d67, #205e7c, #2a7091);
+    -webkit-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  &.is-scrolling{
+    padding: 0;
+  }
+
+  .navbar-brand{
+    img{
+      max-width: 75px;
+      transition: max-width 0.4s;
+      &.is-scrolling{
+        transition: max-width 0.4s;
+        max-width: 35px;
+      }
+    }
+
+    span{
+      .titillium-bold();
+      font-size: 25px;
+      letter-spacing: 1px;
+      margin-left: 10px;
+    }
+  }
+
+  .navbar-nav{
+    &.is-scrolling{
+      @media (max-width: 991px){
+        padding-bottom: 1rem;
+      }
+    }
+
+    .nav-item{
+      @media (max-width:991px){
+        text-align: center;
+      }
+
+      .nav-link{
+        position: relative;
+        .titillium-regular();
+        letter-spacing: 1px;
+
+        @media (min-width: 992px){
+          padding-right: 1rem;
+          padding-left: 1rem;
+          font-size: 14px;
+
+          &.active:after{
+            content: "";
+            border-bottom: 2px solid @lightcolor;
+            left: 1rem;
+            right: 1rem;
+            bottom: 5px;
+            height: 1px;
+            position: absolute;
+          }
+        }
+      }
+
+      .btn{
+        .titillium-bold();
+        letter-spacing: 1px;
+        &:hover{
+          color: @darkcolor;
+        }
+      }
+    }
+  }
+}

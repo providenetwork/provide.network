@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Document title -->
+        <title>provide.network</title>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- SEO meta tags -->
+        <meta property="og:title" content="provide.network" />
+        <meta property="og:description" content="An enterprise-grade network based on the Ethereum protocol built to simplify building and scaling blockchain applications to help businesses realize the potential of blockchain technology" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://provide.network" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+        <link rel="shortcut icon" href="img/favicon.png">
+
+        <meta name="keywords" content="Blockchain, Provide, Provide Technologies, Ethereum, enterprise, blockchain applications, crypto">
+        <link rel="canonical" href="https://provide.network">
+
+        <!-- dns prefetch -->
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+        <!-- font-load -->
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700" rel="stylesheet">
+
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.min.css">
+
+        <!-- Font Awesome 5 -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    </head>
+    <body id="binding-wrapper" data-spy="scroll" data-target="#navbar" data-offset="30">
+        <div class="navigation fixed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav class="navbar navbar-dark navbar-expand-lg">
+                            <a class="navbar-brand" href="/">
+                                <img src="img/provide-lg.png" class="img-fluid" alt="provide logo"> 
+                                <span>provide.network</span>
+                            </a> 
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> 
+                                <span class="navbar-toggler-icon"></span> 
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbar">
+                                <ul class="navbar-nav ml-auto" data-bind="foreach: navLinks">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-bind="text: $data.text, attr: { href: $data.href, class: $data.class }"></a> 
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ko if: heroSection -->
+        <section class="hero bg-image-triangle d-flex align-items-center" id="top">
+            <div class="container">
+                <h1 data-bind="text: mainHeading"></h1>
+                <p class="subtext" data-bind="text: subHeading"></p>
+            </div>
+        </section>
+        <!-- /ko -->
+
+        <!-- ko if: aboutSection -->
+        <section class="features" id="about">
+            <div class="container">
+                <div class="top">
+                    <h4 data-bind="text: aboutHeading"></h4>
+                    <h3 data-bind="text: aboutSubHeading"></h3>
+                </div>
+                <div class="row" data-bind="foreach: aboutHighlights">
+                    <div class="col-12 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="content">
+                                    <span class="content-text">
+                                        <h4 data-bind="text: $data.heading"></h4>
+                                        <p data-bind="text: $data.detail"></p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /ko -->
+
+        <!-- ko if: eventsSection -->
+        <section class="events" id="events">
+            <div class="container">
+                <div class="row d-flex align-items-center" data-bind="foreach: events">
+                    <div class="col-12 col-lg-6">
+                        <img class="img-fluid" src="https://www.placehold.it/600x500" data-bind="attr:{href: $data.imageUrl}" />
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="text-wrapper">
+                            <h3 data-bind="text: $data.heading"></h3>
+                            <p data-bind="text: $data.subHeading"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /ko -->
+
+        <!-- ko if: dividerSection -->
+        <section class="tabs" id="tabs">
+            <div class="container">
+                <div class="top">
+                    <h4 data-bind="text: dividerTopHeading"></h4>
+                    <h3 data-bind="text: dividerBottomHeading"></h3>
+                </div>
+                <ul class="nav nav-tabs nav-justified" role="tablist" data-bind="foreach: dividers">
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" data-bind="text: $data.tabText, attr: {href: '#divider' + $index()}"></a>
+                    </li>
+                </ul>
+                <div class="tab-content" data-bind="foreach: dividers">
+                    <div class="tab-pane fade show" data-bind="attr: {id: 'divider' + $index()}">
+                        <div class="d-flex flex-column flex-lg-row">
+                            <div>
+                                <h2 data-bind="text: $data.heading"></h2>
+                                <p data-bind="html: $data.content"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /ko -->
+
+        <!-- ko if: teamSection -->
+        <section class="team" id="team">
+            <div class="container">
+                <div class="top">
+                    <h4 data-bind="text: teamHeading"></h4>
+                    <h3 data-bind="text: teamSubHeading"></h3>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-4" data-bind="foreach: teamMembers">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="content">
+                                    <span class="content-text">
+                                        <h4 data-bind="text: $data.name"></h4>
+                                        <p data-bind="text: $data.description"></p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /ko -->
+
+        <!-- ko if: allowEmailSubscriptions -->
+        <section class="contact d-flex align-items-center justify-content-center" id="contact">
+            <div class="container">
+                <h2 data-bind="text: subscriptionHeading"></h2>
+                <h5 data-bind="text: subscriptionSubHeading"></h5>
+                <input type="text" id="stayConnectedInput" placeholder="Enter Your Email Address" /> <a href="#" class="btn btn-submit">SUBMIT</a>
+            </div>
+        </section>
+        <!-- /ko -->
+
+        <!-- ko if: contactSection -->
+        <section class="info" id="info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="social-icons" data-bind="foreach: socialMedia">
+                            <a href="#" data-bind="html: $data.icon, attr: {href: $data.href}"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center text-lg-right">
+                        <p class="mb-2" data-bind="html: contactAddress"></p>
+                        <div class="d-block d-sm-inline-block" data-bind="if: contactPhone">
+                            <p class="mb-0">
+                                <i class="fas fa-phone"></i> <a href="#" data-bind="text: contactPhone, attr:{href: contactTel}"></a>
+                            </p>
+                        </div>
+                        <div class=" d-block d-sm-inline-block" data-bind="if: contactEmail">
+                                <p class="mb-2">
+                                    <i class="far fa-envelope"></i> <a class="mr-4" href="#" data-bind="text: contactEmail, attr:{href: contactMailto}"></a>
+                                </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /ko -->
+
+        <!-- ko if: footer -->
+        <footer class="text-center">
+            <p><small data-bind="text: footerText"></small></p>
+        </footer>
+        <!-- /ko -->
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Popper and Bootstrap JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- script for owl carousel for Testimonial sliders? <script src="js/owl.carousel.min.js"></script>-->
+
+        <!-- main site js -->
+        <script src="js/knockout-3.4.0.js"></script>
+        <script src="js/viewModel.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

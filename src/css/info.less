@@ -1,0 +1,31 @@
+@import url("mixins.less");
+@import url("variables.less");
+
+.social-icons{
+  text-align: left;
+
+  a{
+    background-color: #FFF;
+    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.25);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 0.3rem;
+    border-radius: 5px;
+    color: @darkcolor;
+    transition: all 0.3s ease;
+
+    &:hover{
+      text-decoration: none;
+      color: @lightcolor;
+      transform: translateY(-3px);
+    }
+  }
+
+  @media (max-width: 991px){
+    text-align: center;
+    margin: 2rem 0rem;
+  }
+}

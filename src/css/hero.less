@@ -1,0 +1,41 @@
+@import url("variables.less");
+@import url("mixins.less");
+
+.hero{
+  text-align: center;
+  color: #FFF;
+  height: 65vh;
+  @media (max-width: 600px){
+    height: 100vh;
+  }
+  &.bg-gradient{
+    background-image: -moz-linear-gradient(to right bottom, #042d40, #0d3d53, #174d67, #205e7c, #2a7091);
+    background-image: -webkit-linear-gradient(to right bottom, #042d40, #0d3d53, #174d67, #205e7c, #2a7091);
+    background-image: -ms-linear-gradient(to right bottom, #042d40, #0d3d53, #174d67, #205e7c, #2a7091);
+    background-image: linear-gradient(to right bottom, #042d40, #0d3d53, #174d67, #205e7c, #2a7091);
+  }
+
+  &.bg-image-triangle{
+    background-image: url("../img/trianglify(NoVariance).png");
+  }
+
+  .container{
+    h1{
+      .titillium-bold();
+      letter-spacing: 1px;
+    }
+
+    .subtext {
+      .roboto-mono-light();
+      font-size: 25px;
+      font-weight: 300;
+      color: #fff;
+      max-width: 800px;
+      margin: 0 auto;
+
+      @media (max-width: 767px){
+        font-size: 18px;
+      }
+    }
+  }
+}
