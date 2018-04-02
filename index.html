@@ -158,14 +158,18 @@
         <!-- ko if: eventsSection -->
         <section class="events" id="events">
             <div class="container">
-                <div class="row d-flex align-items-center" data-bind="foreach: events">
-                    <div class="col-12 col-lg-6">
-                        <img class="img-fluid" data-bind="attr:{src: $data.imageUrl}" />
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="text-wrapper">
-                            <h3 data-bind="text: $data.heading"></h3>
-                            <p data-bind="html: $data.subHeading"></p>
+                <div id="eventsCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" data-bind="foreach: events">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-12 col-lg-6">
+                                <img class="img-fluid" data-bind="attr:{src: $data.imageUrl}" />
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="text-wrapper">
+                                    <h3 data-bind="text: $data.heading"></h3>
+                                    <p data-bind="html: $data.subHeading"></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -250,8 +254,9 @@
         <!-- script for owl carousel for Testimonial sliders? <script src="js/owl.carousel.min.js"></script>-->
 
         <!-- main site js -->
-        <script src="js/knockout-3.4.0.js"></script>
-        <script src="js/viewModel.js"></script>
-        <script src="js/main.js"></script>
+        <script type="text/javascript" src="js/knockout-3.4.0.js"></script>
+        <script type="text/javascript" src="js/viewModel.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/slick.min.js"></script>
     </body>
 </html>
