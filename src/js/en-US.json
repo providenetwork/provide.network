@@ -86,19 +86,19 @@
     {
       "socialMedia": [
         {
-          "icon": "<i class='fab fa-twitter-f'></i>",
+          "icon": "<i class='fab fa-twitter'></i>",
           "href": "https://twitter.com/provide.network"
         },
         {
-          "icon": "<i class='fab fa-medium-f'></i>",
+          "icon": "<i class='fab fa-medium'></i>",
           "href": "https://medium.com/@provide"
         },
         {
-          "icon": "<i class='fab fa-github-f'></i>",
+          "icon": "<i class='fab fa-github'></i>",
           "href": "https://github.com/providenetwork"
         },
         {
-          "icon": "<i class='fab fa-telegram-f'></i>",
+          "icon": "<i class='fab fa-telegram'></i>",
           "href": "https://t.me/joinchat/GXp2vFNWuJb0LW7G7rgfWA"
         }
       ],
