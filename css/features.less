@@ -1,0 +1,88 @@
+@import url("variables.less");
+@import url("mixins.less");
+
+.features{
+  background-color: rgba(4,45,64,.25);
+
+  &.mission{
+    background-color: #fff;
+    .container{
+      .row{
+        .col-12{
+          &:first-child{
+            text-align: center;
+            img{
+              max-width: 355px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .container{
+    .top{
+      text-align: center;
+      margin-bottom: 3rem;
+      h4, h3{
+        .titillium-bold();
+        letter-spacing: 1px;
+        color: @darkcolor;
+      }
+    }
+
+    .row{
+      .col-12{
+        .card{
+          border: 0;
+          border-radius: 3px;
+          box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.04);
+          transition: all 0.3s ease;
+          min-height: 25vh;
+          margin: 0px 0px 40px;
+          @media (max-width: 991px){
+            margin-bottom: 2rem;
+          }
+
+          &:before{
+            content: "";
+            position: absolute;
+            width: 3px;
+            color: @darkcolor;
+            background: -moz-linear-gradient(to bottom, #042d40, #0d3d53, #174d67, #205e7c, #2a7091);
+            background: -webkit-linear-gradient(to bottom, #042d40, #0d3d53, #174d67, #205e7c, #2a7091);
+            background: linear-gradient(to bottom, #042d40, #0d3d53, #174d67, #205e7c, #2a7091);
+            top: 0;
+            bottom: 0;
+            left: 0;
+          }
+
+          &:hover{
+            // transform: translateY(-3px);
+            // -moz-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+            // -webkit-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+            // box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+          }
+
+          .card-body{
+            .content{
+              .content-text{
+                h4{
+                  .titillium-bold();
+                  color: @darkcolor;
+                  letter-spacing: 1px;
+                }
+
+                p{
+                  .roboto-mono-regular();
+                  color: @lightcolor;
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
