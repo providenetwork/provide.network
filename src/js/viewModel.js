@@ -33,6 +33,13 @@ $(function() {
         ns.subHeading = ko.observable();
         /*End Hero Section Observables*/
 
+        /*Mission Section Observables*/
+        ns.missionSection = ko.observable(true);
+        ns.missionHeading = ko.observable();
+        ns.missionSubHeading = ko.observable();
+        ns.missionHighlights = ko.observableArray();
+        /*End Mission Section Observables*/
+
         /*About Section Observables*/
         ns.aboutSection = ko.observable(true);
         ns.aboutHeading = ko.observable();
@@ -95,6 +102,15 @@ $(function() {
             } else{
                 ns.mainHeading(hero.mainHeading);
                 ns.subHeading(hero.subHeading);
+            }
+
+            var mission = (ns.data()["mission"]) ? ns.data()["mission"][0] : null;
+            if (!shouldRender(mission)) {
+                ns.missionSection(false);
+            } else {
+                ns.missionHeading(mission.heading);
+                ns.missionSubHeading(mission.subHeading);
+                ns.missionHighlights(mission.highlights);
             }
 
             var about = (ns.data()["about"]) ? ns.data()["about"][0] : null;

@@ -17,7 +17,8 @@
   border-radius: 3px;
   box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.04);
   transition: all 0.3s ease;
-  cursor: pointer;
+  min-height: 215px;
+  margin: 0px 0px 40px;
 }
 @media (max-width: 991px) {
   .features .container .row .col-12 .card {
@@ -37,10 +38,10 @@
   left: 0;
 }
 .features .container .row .col-12 .card:hover {
-  transform: translateY(-3px);
-  -moz-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+  /* transform: translateY(-3px); */
+  /* -moz-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
   -webkit-box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
-  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.08); */
 }
 .features .container .row .col-12 .card .card-body .content .content-text h4 {
   font-family: "Titillium Web", sans-serif;
@@ -52,4 +53,7 @@
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
   color: #2A7091;
+}
+.features.mission {
+  background: white !important;
 }

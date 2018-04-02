@@ -72,8 +72,36 @@
         </section>
         <!-- /ko -->
 
+        <!-- ko if: missionSection -->
+        <section class="features mission" id="mission">
+            <div class="container">
+                <div class="top">
+                    <h4 data-bind="text: missionHeading"></h4>
+                    <h3 data-bind="text: missionSubHeading"></h3>
+                </div>
+                <div class="col-12 col-lg-6" style='width:40%;float:left'> <!-- HACK!!! -->
+                    <img class="img-fluid" src="https://s3.amazonaws.com/provide.network/img/prvd-oracle.png" />
+                </div>
+                <div class="row" data-bind="foreach: missionHighlights">
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="content">
+                                    <span class="content-text">
+                                        <h4 data-bind="text: $data.heading"></h4>
+                                        <p data-bind="text: $data.detail"></p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /ko -->
+
         <!-- ko if: aboutSection -->
-        <section class="features" id="mission">
+        <section class="features" id="network">
             <div class="container">
                 <div class="top">
                     <h4 data-bind="text: aboutHeading"></h4>
@@ -122,18 +150,18 @@
             </div>
         </section>
         <!-- /ko -->
-            
+
         <!-- ko if: eventsSection -->
         <section class="events" id="events">
             <div class="container">
                 <div class="row d-flex align-items-center" data-bind="foreach: events">
                     <div class="col-12 col-lg-6">
-                        <img class="img-fluid" src="https://www.placehold.it/600x500" data-bind="attr:{href: $data.imageUrl}" />
+                        <img class="img-fluid" data-bind="attr:{src: $data.imageUrl}" />
                     </div>
                     <div class="col-12 col-lg-6">
                         <div class="text-wrapper">
                             <h3 data-bind="text: $data.heading"></h3>
-                            <p data-bind="text: $data.subHeading"></p>
+                            <p data-bind="html: $data.subHeading"></p>
                         </div>
                     </div>
                 </div>
@@ -193,10 +221,10 @@
                             </p>
                         </div>
                         <div class=" d-block d-sm-inline-block" data-bind="if: contactEmail">
-                                <p class="mb-2">
-                                    <i class="far fa-envelope"></i> <a class="mr-4" href="#" data-bind="text: contactEmail, attr:{href: contactMailto}"></a>
-                                </p>
-                            </div>
+                            <p class="mb-2">
+                                <i class="far fa-envelope"></i> <a class="mr-4" href="#" data-bind="text: contactEmail, attr:{href: contactMailto}"></a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

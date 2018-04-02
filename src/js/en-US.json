@@ -18,30 +18,52 @@
           "class": "nav-link"
         },
         {
-          "text": "Team",
-          "href": "#team",
-          "class": "nav-link"
-        },
-        {
           "text": "Join ICO",
           "href": "https://",
-          "class": "btn btn-outline-light"
+          "class": "btn btn-outline-light disabled"
         }
       ]
     }
   ],
   "hero": [
     {
-      "mainHeading": "Enterprise-grade Proof-of-Authority",
-      "subHeading" : "Reliable Ethereum-based blockchain network for enterprise use-cases."
+      "mainHeading": "Enterprise-grade Blockchain Network",
+      "subHeading" : "Proof-of-authority network for enterprise use-cases."
+    }
+  ],
+  "mission": [
+    {
+      "heading": "Our Mission",
+      "subHeading": "",
+      "highlights": [
+        {
+         "heading": "Problem",
+         "detail": "Existing blockchain networks are unapproachable for building enterprise use-cases due to high technical barriers to entry."
+        },
+        {
+          "heading": "Mission",
+          "detail": "provide.network is a fast, reliable enterprise-class blockchain network built to help businesses of all sizes fully realize the disruptive potential of blockchain technology."
+        }
+      ]
     }
   ],
   "about": [
     {
-      "heading": "Mission",
+      "heading": "Network",
       "subHeading": "",
       "highlights": [
-        
+        {
+         "heading": "Predictable block time",
+         "detail": "Proof-of-authority consensus allows for fast, predictable block times."
+        },
+        {
+          "heading": "Transparent governance",
+          "detail": "Highly-upgradeable on-chain consensus, governed by organizational validators."
+        },
+        {
+          "heading": "Blueprint for enterprise",
+          "detail": "Private provide.network sidechains can be deployed anywhere."
+        }
       ]
     }
   ],
@@ -51,19 +73,15 @@
       "subHeading" : "We hope to see you at one of these exciting community events.",
       "events": [
         {
-          "heading": "ETHAtl",
-          "subHeading" : "Join us in Atlanta for ETHAtl, the enterprise blockchain hackathon.",
-          "imageUrl": "https://slide.ly/promo/share/5ac0a72e76e0df2e277b23c6",
+          "heading": "EthAtlanta",
+          "subHeading" : "<a target=\"_blank\" href=\"https://ethatl.com\">Join us</a> in Atlanta for EthAtlanta, the enterprise blockchain hackathon.",
+          "imageUrl": "https://s3.amazonaws.com/provide.network/img/ethatl-uniting-business-with-blockchain.png",
           "date": "June 2018 (exact date TBA)"
         }
       ]
     }
   ],
-  "cardViews": [
-    [
-
-    ]
-  ],
+  "cardViews": [],
   "team": [
     {
       "enabled": false,
@@ -86,19 +104,19 @@
     {
       "socialMedia": [
         {
-          "icon": "<i class='fab fa-twitter'></i>",
+          "icon": "<i class='fab fa-twitter fa-lg'></i>",
           "href": "https://twitter.com/provide.network"
         },
         {
-          "icon": "<i class='fab fa-medium'></i>",
+          "icon": "<i class='fab fa-medium fa-lg'></i>",
           "href": "https://medium.com/@provide"
         },
         {
-          "icon": "<i class='fab fa-github'></i>",
+          "icon": "<i class='fab fa-github fa-lg'></i>",
           "href": "https://github.com/providenetwork"
         },
         {
-          "icon": "<i class='fab fa-telegram'></i>",
+          "icon": "<i class='fab fa-telegram fa-lg'></i>",
           "href": "https://t.me/joinchat/GXp2vFNWuJb0LW7G7rgfWA"
         }
       ],
