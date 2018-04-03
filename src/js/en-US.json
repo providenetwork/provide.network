@@ -37,6 +37,9 @@
       "subHeading": "",
       "highlights": [
         {
+          "img": "https://s3.amazonaws.com/provide.network/img/prvd-oracle.png"
+        },
+        {
          "heading": "Problem",
          "detail": "Existing blockchain networks are unapproachable for building enterprise use-cases due to high technical barriers to entry."
         },
@@ -76,6 +79,12 @@
           "heading": "EthAtlanta",
           "subHeading" : "<a target=\"_blank\" href=\"https://ethatl.com\">Join us</a> in Atlanta for EthAtlanta, the enterprise blockchain hackathon.",
           "imageUrl": "https://s3.amazonaws.com/provide.network/img/ethatl-uniting-business-with-blockchain.png",
+          "date": "June 2018 (exact date TBA)"
+        },
+        {
+          "heading": "TEST EVENT",
+          "subHeading" : "<a target=\"_blank\" href=\"https://ethatl.com\">Join us</a> in Atlanta for EthAtlanta, the enterprise blockchain hackathon.",
+          "imageUrl": "https://placehold.it/540x306",
           "date": "June 2018 (exact date TBA)"
         }
       ]

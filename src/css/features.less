@@ -3,6 +3,23 @@
 
 .features{
   background-color: rgba(4,45,64,.25);
+
+  &.mission{
+    background-color: #fff;
+    .container{
+      .row{
+        .col-12{
+          &:first-child{
+            text-align: center;
+            img{
+              max-width: 355px;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .container{
     .top{
       text-align: center;
@@ -21,7 +38,7 @@
           border-radius: 3px;
           box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.04);
           transition: all 0.3s ease;
-          min-height: 215px;
+          min-height: 25vh;
           margin: 0px 0px 40px;
           @media (max-width: 991px){
             margin-bottom: 2rem;

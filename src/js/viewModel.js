@@ -3,7 +3,20 @@ window.provide.Models = window.provide.Models || {};
 
 function grabJSON() {
     window.provide.Models.ViewModel.loading(true);
-    var url = "js/en-US.json";
+    var url = "/js/en-US.json";
+    var $dfd = new $.Deferred();
+    var data = {};
+    $.getJSON(url, data, function (result) {
+        $dfd.resolve(result);
+    }).fail(function (xhr) {
+        $dfd.reject(xhr);
+    });
+    return $dfd.promise();
+}
+
+function grabStats(){
+    window.provide.Models.ViewModel.loading(true);
+    var url = "/js/testing.json";
     var $dfd = new $.Deferred();
     var data = {};
     $.getJSON(url, data, function (result) {
@@ -86,7 +99,7 @@ $(function() {
 
         /*Footer Text*/
         ns.footer = ko.observable();
-        ns.footerText = ko.observable()
+        ns.footerText = ko.observable();
 
         ns.setView = function(){
             var nav = (ns.data()["nav"]) ? ns.data()["nav"][0]: [];
@@ -173,12 +186,70 @@ $(function() {
             }
         }
 
+        ns.slickifyEvents = function(){
+            $('.carousel-inner').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                dots: true
+            });
+        }
+
+        ns.smoothScrollEnable = function(){
+            $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[data-toggle="tab"]').on('click', function(event) {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var chosen = $(this.hash);
+                    chosen = chosen.length ? chosen : $('[name=' + this.hash.slice(1) + ']');
+                    var offset = chosen.offset().top - 25;
+                    if (chosen.length) {
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: (offset)
+                        }, 1000, function() {
+                            var $chosen = $(chosen);
+                            $chosen.focus();
+                            if (chosen.is(":focus")) {
+                                return false;
+                            } else {
+                                $chosen.attr('tabindex', '-1');
+                                $chosen.focus();
+                            };
+                        });
+                    }
+                }
+            });
+        }
+
+        ns.stats = ko.observableArray();
+        ns.tophat1Text = ko.observable("Best Block");
+        ns.block = ko.observable();
+        ns.tophat2Text = ko.observable("Last Block");
+        ns.lastBlock = ko.observable();
+        ns.tophat3Text = ko.observable("Avg. Time");
+        ns.avgTime = ko.observable();
+        ns.setStats = function(){
+            var stats = ns.stats();
+            ns.block(stats.block);
+            ns.lastBlock(((stats.last_block_timestamp / 1000) + "s ago"));
+            ns.avgTime(((stats.avg_block_time / 1000) + "s"));
+        }
+
         var init = function() {
             grabJSON().then(function(data) {
                 ns.data(data);
                 ns.setView();
+                grabStats().then(function(data){
+                    ns.stats(data);
+                    ns.setStats();
+                    ns.slickifyEvents();
+                    ns.smoothScrollEnable();
+                }, function(){
+
+                });
             }, function() {
-                // TODO: focus initial active nav and cardview
+
+
             });
         };
 

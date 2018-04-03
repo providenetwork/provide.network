@@ -7,7 +7,7 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
         <!-- SEO meta tags -->
         <meta property="og:title" content="provide.network" />
@@ -40,17 +40,71 @@
     <body id="binding-wrapper" data-spy="scroll" data-target="#navbar" data-offset="30">
         <div class="navigation fixed-top">
             <div class="container">
+                <div class="row mobile-tophat flex-row">
+                    <div class="col-md-12 d-flex">
+                        <div class="tophat-block d-flex flex-row align-items-center">
+                            <i class="icon-block"></i>
+                            <div class="wrapper">
+                                <p class="mobile-top-text" data-bind="text: tophat1Text"></p>
+                                <p data-bind="text: block"></p>
+                            </div>
+                        </div>
+                        <div class="tophat-block d-flex flex-row align-items-center">
+                            <i class="icon-time"></i>
+                            <div class="wrapper">
+                                <p class="mobile-top-text" data-bind="text: tophat2Text"></p>
+                                <p data-bind="text: lastBlock"></p>
+                            </div>
+                        </div>
+                        <div class="tophat-block d-flex flex-row align-items-center">
+                            <i class="icon-gas"></i>
+                            <div class="wrapper">
+                                <p class="mobile-top-text" data-bind="text: tophat3Text"></p>
+                                <p data-bind="text: avgTime"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-12">
                         <nav class="navbar navbar-dark navbar-expand-lg">
-                            <a class="navbar-brand" href="/">
+                            <a class="navbar-brand" href="#top">
                                 <img src="img/provide-lg.png" class="img-fluid" alt="provide logo"> 
                                 <span>provide.network</span>
                             </a> 
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> 
-                                <span class="navbar-toggler-icon"></span> 
+                            <button id="toggleNav" class="navbar-toggler hamburger hamburger--spring" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbar">
+                                <div class="row tophat flex-row">
+                                    <div class="col-md-12 d-flex">
+                                        <div class="tophat-block d-flex flex-row align-items-center">
+                                            <i class="icon-block"></i>
+                                            <div class="wrapper">
+                                                <p class="mobile-top-text" data-bind="text: tophat1Text"></p>
+                                                <p data-bind="text: block"></p>
+                                            </div>
+                                        </div>
+                                        <div class="tophat-block d-flex flex-row align-items-center">
+                                            <i class="icon-time"></i>
+                                            <div class="wrapper">
+                                                <p class="mobile-top-text" data-bind="text: tophat2Text"></p>
+                                                <p data-bind="text: lastBlock"></p>
+                                            </div>
+                                        </div>
+                                        <div class="tophat-block d-flex flex-row align-items-center">
+                                            <i class="icon-gas"></i>
+                                            <div class="wrapper">
+                                                <p class="mobile-top-text" data-bind="text: tophat3Text"></p>
+                                                <p data-bind="text: avgTime"></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                                 <ul class="navbar-nav ml-auto" data-bind="foreach: navLinks">
                                     <li class="nav-item">
                                         <a class="nav-link active" data-bind="text: $data.text, attr: { href: $data.href, class: $data.class }"></a> 
@@ -79,13 +133,16 @@
                     <h4 data-bind="text: missionHeading"></h4>
                     <h3 data-bind="text: missionSubHeading"></h3>
                 </div>
-                <div class="col-12 col-lg-6" style='width:40%;float:left'> <!-- HACK!!! -->
-                    <img class="img-fluid" src="https://s3.amazonaws.com/provide.network/img/prvd-oracle.png" />
-                </div>
                 <div class="row" data-bind="foreach: missionHighlights">
-                    <div class="col-12 col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
+                    <!-- ko if: $index() === 0 -->
+                    <div class="col-12 col-lg-4">
+                        <img class="img-fluid" src="" data-bind="attr: {src: $data.img}" />
+                    </div>
+                    <!-- /ko -->
+                    <!-- ko ifnot: $index() === 0 -->
+                    <div class="col-12 col-lg-4">
+                        <div class="card d-flex">
+                            <div class="card-body d-flex align-items-center">
                                 <div class="content">
                                     <span class="content-text">
                                         <h4 data-bind="text: $data.heading"></h4>
@@ -95,6 +152,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- /ko -->
                 </div>
             </div>
         </section>
@@ -109,8 +167,8 @@
                 </div>
                 <div class="row" data-bind="foreach: aboutHighlights">
                     <div class="col-12 col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
+                        <div class="card d-flex">
+                            <div class="card-body d-flex align-items-center">
                                 <div class="content">
                                     <span class="content-text">
                                         <h4 data-bind="text: $data.heading"></h4>
@@ -154,14 +212,18 @@
         <!-- ko if: eventsSection -->
         <section class="events" id="events">
             <div class="container">
-                <div class="row d-flex align-items-center" data-bind="foreach: events">
-                    <div class="col-12 col-lg-6">
-                        <img class="img-fluid" data-bind="attr:{src: $data.imageUrl}" />
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="text-wrapper">
-                            <h3 data-bind="text: $data.heading"></h3>
-                            <p data-bind="html: $data.subHeading"></p>
+                <div id="eventsCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" data-bind="foreach: events">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-12 col-lg-6">
+                                <img class="img-fluid" data-bind="attr:{src: $data.imageUrl}" />
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="text-wrapper">
+                                    <h3 data-bind="text: $data.heading"></h3>
+                                    <p data-bind="html: $data.subHeading"></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -246,8 +308,9 @@
         <!-- script for owl carousel for Testimonial sliders? <script src="js/owl.carousel.min.js"></script>-->
 
         <!-- main site js -->
-        <script src="js/knockout-3.4.0.js"></script>
-        <script src="js/viewModel.js"></script>
-        <script src="js/main.js"></script>
+        <script type="text/javascript" src="js/knockout-3.4.0.js"></script>
+        <script type="text/javascript" src="js/viewModel.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/slick.min.js"></script>
     </body>
 </html>

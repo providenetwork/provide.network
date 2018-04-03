@@ -2,7 +2,7 @@
 @import url("mixins.less");
 
 .navigation {
-  padding: 1rem 0;
+  padding-bottom: 1rem;
   transition: all 0.3s ease;
 
   &.is-scrolling, &.menu-is-open{
@@ -19,13 +19,73 @@
     padding: 0;
   }
 
+  .mobile-tophat{
+    display: none;
+    -webkit-transition: padding-top 0.3s;
+    transition: padding-top 0.3s;
+    padding-top: 1rem;
+    @media (max-width: 991px){
+      display: flex;
+    }
+    &.is-scrolling{
+      -webkit-transition: padding-top 0.3s;
+      transition: padding-top 0.3s;
+      padding-top: 0.5rem;
+    }
+    .col-md-12{
+      justify-content: space-between;
+      .tophat-block{
+        i{
+          color: #fff;
+          -webkit-transition: font-size 0.3s;
+          transition: font-size 0.3s;
+          font-size: 1.5rem;
+          &.is-scrolling{
+            -webkit-transition: font-size 0.3s;
+            transition: font-size 0.3s;
+            font-size: 1rem;
+          }
+        }
+        .wrapper{
+          text-align: right;
+          line-height: 18px;
+          margin-left: 10px;
+          p{
+            @media (max-width: 768px){
+              font-size: 0.85rem;
+            }
+            .titillium-regular();
+            color: #fff;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+  }
+
+
   .navbar-brand{
+    padding-top: 15px;
+    -webkit-transition: padding-top 0.3;
+    transition: padding-top 0.3s;
+    &.is-scrolling{
+      padding-top: 0px;
+      -webkit-transition: padding-top 0.3;
+      transition: padding-top 0.3s;
+    }
+    @media (max-width: 991px){
+      padding-top: .3125rem;
+    }
     img{
       max-width: 75px;
       transition: max-width 0.4s;
       &.is-scrolling{
         transition: max-width 0.4s;
         max-width: 35px;
+      }
+      @media (max-width: 500px){
+        max-width: 45px;
       }
     }
 
@@ -34,48 +94,87 @@
       font-size: 25px;
       letter-spacing: 1px;
       margin-left: 10px;
+      @media (max-width: 500px){
+        font-size: 18px;
+      }
     }
   }
 
-  .navbar-nav{
+  .navbar-collapse{
+    flex-direction: column;
     &.is-scrolling{
-      @media (max-width: 991px){
-        padding-bottom: 1rem;
-      }
+      flex-direction: row;
     }
 
-    .nav-item{
-      @media (max-width:991px){
-        text-align: center;
+    .tophat{
+      margin-left: auto !important;
+      padding-right: 1rem;
+      @media (max-width: 991px){
+        display: none;
       }
-
-      .nav-link{
-        position: relative;
-        .titillium-regular();
-        letter-spacing: 1px;
-
-        @media (min-width: 992px){
-          padding-right: 1rem;
+      .tophat-block{
+        margin-left: 10px;
+        &:first-child{
           padding-left: 1rem;
-          font-size: 14px;
-
-          &.active:after{
-            content: "";
-            border-bottom: 2px solid @lightcolor;
-            left: 1rem;
-            right: 1rem;
-            bottom: 5px;
-            height: 1px;
-            position: absolute;
+        }
+        i{
+          color: #fff;
+          font-size: 1.5rem;
+        }
+        .wrapper{
+          text-align: right;
+          line-height: 18px;
+          margin-left: 10px;
+          p{
+            .titillium-regular();
+            color: #fff;
+            margin-bottom: 0;
           }
         }
       }
+    }
 
-      .btn{
-        .titillium-bold();
-        letter-spacing: 1px;
-        &:hover{
-          color: @darkcolor;
+    .navbar-nav{
+      padding-top: 0.75rem;
+      &.is-scrolling{
+        @media (max-width: 991px){
+          padding-bottom: 0rem;
+        }
+      }
+
+      .nav-item{
+        @media (max-width:991px){
+          text-align: center;
+        }
+
+        .nav-link{
+          position: relative;
+          .titillium-regular();
+          letter-spacing: 1px;
+
+          @media (min-width: 992px){
+            padding-right: 1rem;
+            padding-left: 1rem;
+            font-size: 14px;
+
+            &.active:after{
+              content: "";
+              border-bottom: 2px solid @lightcolor;
+              left: 1rem;
+              right: 1rem;
+              bottom: 5px;
+              height: 1px;
+              position: absolute;
+            }
+          }
+        }
+
+        .btn{
+          .titillium-bold();
+          letter-spacing: 1px;
+          &:hover{
+            color: @darkcolor;
+          }
         }
       }
     }
