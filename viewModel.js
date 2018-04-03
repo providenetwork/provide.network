@@ -183,11 +183,37 @@ $(function() {
             });
         }
 
+        ns.smoothScrollEnable = function(){
+            $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').not('[data-toggle="tab"]').on('click', function(event) {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var chosen = $(this.hash);
+                    chosen = chosen.length ? chosen : $('[name=' + this.hash.slice(1) + ']');
+                    var offset = chosen.offset().top - 25;
+                    if (chosen.length) {
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: (offset)
+                        }, 1000, function() {
+                            var $chosen = $(chosen);
+                            $chosen.focus();
+                            if (chosen.is(":focus")) {
+                                return false;
+                            } else {
+                                $chosen.attr('tabindex', '-1');
+                                $chosen.focus();
+                            };
+                        });
+                    }
+                }
+            });
+        }
+
         var init = function() {
             grabJSON().then(function(data) {
                 ns.data(data);
                 ns.setView();
                 ns.slickifyEvents();
+                ns.smoothScrollEnable();
             }, function() {
                 // TODO: focus initial active nav and cardview
 
