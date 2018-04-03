@@ -80,12 +80,6 @@
           "subHeading" : "<a target=\"_blank\" href=\"https://ethatl.com\">Join us</a> in Atlanta for EthAtlanta, the enterprise blockchain hackathon.",
           "imageUrl": "https://s3.amazonaws.com/provide.network/img/ethatl-uniting-business-with-blockchain.png",
           "date": "June 2018 (exact date TBA)"
-        },
-        {
-          "heading": "TEST EVENT",
-          "subHeading" : "<a target=\"_blank\" href=\"https://ethatl.com\">Join us</a> in Atlanta for EthAtlanta, the enterprise blockchain hackathon.",
-          "imageUrl": "https://placehold.it/540x306",
-          "date": "June 2018 (exact date TBA)"
         }
       ]
     }
