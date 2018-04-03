@@ -14,6 +14,19 @@ function grabJSON() {
     return $dfd.promise();
 }
 
+function grabStats(){
+    window.provide.Models.ViewModel.loading(true);
+    var url = "/js/testing.json";
+    var $dfd = new $.Deferred();
+    var data = {};
+    $.getJSON(url, data, function (result) {
+        $dfd.resolve(result);
+    }).fail(function (xhr) {
+        $dfd.reject(xhr);
+    });
+    return $dfd.promise();
+}
+
 function shouldRender(section) {
     return section != null && (typeof(section.enabled) == 'undefined' || section.enabled);
 }
@@ -208,14 +221,34 @@ $(function() {
             });
         }
 
+        ns.stats = ko.observableArray();
+        ns.tophat1Text = ko.observable("Best Block");
+        ns.block = ko.observable();
+        ns.tophat2Text = ko.observable("Last Block");
+        ns.lastBlock = ko.observable();
+        ns.tophat3Text = ko.observable("Avg. Time");
+        ns.avgTime = ko.observable();
+        ns.setStats = function(){
+            var stats = ns.stats();
+            ns.block(stats.block);
+            ns.lastBlock(((stats.last_block_timestamp / 1000) + "s ago"));
+            ns.avgTime(((stats.avg_block_time / 1000) + "s"));
+        }
+
         var init = function() {
             grabJSON().then(function(data) {
                 ns.data(data);
                 ns.setView();
-                ns.slickifyEvents();
-                ns.smoothScrollEnable();
+                grabStats().then(function(data){
+                    ns.stats(data);
+                    ns.setStats();
+                    ns.slickifyEvents();
+                    ns.smoothScrollEnable();
+                }, function(){
+
+                });
             }, function() {
-                // TODO: focus initial active nav and cardview
+
 
             });
         };

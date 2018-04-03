@@ -5,10 +5,6 @@ $(function(){
         window.provide.Models.ViewModel = window.provide.Models.ViewModel || {};
     })(window.provide = window.provide || {})
 
-    $('.navbar-nav > li:not(.dropdown) > a').on('click', function() {
-        $('.navbar-collapse').collapse('hide');
-    });
-
     var navigation = $("#navbar");
     navigation.on("show.bs.collapse", function(e){
        $(this).parents(".navigation").addClass("menu-is-open") ;
@@ -19,14 +15,32 @@ $(function(){
 
     function scrolled(){
         var $nav = $('.navigation');
+        var $links = $(".navbar-nav");
+        var $navCollapse = $('.navbar-collapse');
+        var $navBrand = $('.navbar-brand');
         var $logo = $(".navbar-brand img");
+        var $mobileText = $('.mobile-tophat .col-md-12 .tophat-block .wrapper .mobile-top-text');
+        var $mobileIcons = $(".mobile-tophat .col-md-12 .tophat-block i");
+        var $mobileTophat = $(".mobile-tophat");
         if($(window).scrollTop() > 50){
             $nav.addClass("is-scrolling");
             $logo.addClass("is-scrolling");
+            $navCollapse.addClass("is-scrolling");
+            $navBrand.addClass("is-scrolling");
+            $mobileText.slideUp("3000");
+            $mobileIcons.addClass("is-scrolling");
+            $mobileTophat.addClass("is-scrolling");
+            $links.addClass("is-scrolling");
         }
         else{
             $nav.removeClass("is-scrolling");
             $logo.removeClass("is-scrolling");
+            $navCollapse.removeClass("is-scrolling");
+            $navBrand.removeClass("is-scrolling");
+            $mobileText.slideDown("3000");
+            $mobileIcons.removeClass("is-scrolling");
+            $mobileTophat.removeClass("is-scrolling");
+            $links.removeClass("is-scrolling");
         }
     }
     scrolled();

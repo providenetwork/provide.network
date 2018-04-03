@@ -1,0 +1,147 @@
+{
+  "nav": [
+    {
+      "links": [
+        {
+          "text": "Mission",
+          "href": "#mission",
+          "class": "nav-link"
+        },
+        {
+          "text": "Network",
+          "href": "#network",
+          "class": "nav-link"
+        },
+        {
+          "text": "Events",
+          "href": "#events",
+          "class": "nav-link"
+        },
+        {
+          "text": "Join ICO",
+          "href": "https://",
+          "class": "btn btn-outline-light disabled"
+        }
+      ]
+    }
+  ],
+  "hero": [
+    {
+      "mainHeading": "Enterprise-grade Blockchain Network",
+      "subHeading" : "Proof-of-authority network for enterprise use-cases."
+    }
+  ],
+  "mission": [
+    {
+      "heading": "Our Mission",
+      "subHeading": "",
+      "highlights": [
+        {
+          "img": "https://s3.amazonaws.com/provide.network/img/prvd-oracle.png"
+        },
+        {
+         "heading": "Problem",
+         "detail": "Existing blockchain networks are unapproachable for building enterprise use-cases due to high technical barriers to entry."
+        },
+        {
+          "heading": "Mission",
+          "detail": "provide.network is a fast, reliable enterprise-class blockchain network built to help businesses of all sizes fully realize the disruptive potential of blockchain technology."
+        }
+      ]
+    }
+  ],
+  "about": [
+    {
+      "heading": "Network",
+      "subHeading": "",
+      "highlights": [
+        {
+         "heading": "Predictable block time",
+         "detail": "Proof-of-authority consensus allows for fast, predictable block times."
+        },
+        {
+          "heading": "Transparent governance",
+          "detail": "Highly-upgradeable on-chain consensus, governed by organizational validators."
+        },
+        {
+          "heading": "Blueprint for enterprise",
+          "detail": "Private provide.network sidechains can be deployed anywhere."
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "heading" : "Events",
+      "subHeading" : "We hope to see you at one of these exciting community events.",
+      "events": [
+        {
+          "heading": "EthAtlanta",
+          "subHeading" : "<a target=\"_blank\" href=\"https://ethatl.com\">Join us</a> in Atlanta for EthAtlanta, the enterprise blockchain hackathon.",
+          "imageUrl": "https://s3.amazonaws.com/provide.network/img/ethatl-uniting-business-with-blockchain.png",
+          "date": "June 2018 (exact date TBA)"
+        },
+        {
+          "heading": "TEST EVENT",
+          "subHeading" : "<a target=\"_blank\" href=\"https://ethatl.com\">Join us</a> in Atlanta for EthAtlanta, the enterprise blockchain hackathon.",
+          "imageUrl": "https://placehold.it/540x306",
+          "date": "June 2018 (exact date TBA)"
+        }
+      ]
+    }
+  ],
+  "cardViews": [],
+  "team": [
+    {
+      "enabled": false,
+      "heading": "Team",
+      "subHeading": "",
+      "members": [
+        {
+            "name": null,
+            "title": null,
+            "description": null,
+            "linkedinHref": null,
+            "githubHref": null,
+            "mediumHref": null,
+            "twitterHref": null
+        }
+      ]
+    }
+  ],
+  "contact": [
+    {
+      "socialMedia": [
+        {
+          "icon": "<i class='fab fa-twitter fa-lg'></i>",
+          "href": "https://twitter.com/providenetwork"
+        },
+        {
+          "icon": "<i class='fab fa-medium fa-lg'></i>",
+          "href": "https://medium.com/@provide"
+        },
+        {
+          "icon": "<i class='fab fa-github fa-lg'></i>",
+          "href": "https://github.com/providenetwork"
+        },
+        {
+          "icon": "<i class='fab fa-telegram fa-lg'></i>",
+          "href": "https://t.me/joinchat/GXp2vFNWuJb0LW7G7rgfWA"
+        }
+      ],
+      "address": "<i class='fas fa-map-marker'></i>&nbsp;Atlanta, GA",
+      "email": "hello@provide.network",
+      "mailto": "mailto:hello@provide.network",
+      "phone": null,
+      "tel": null,
+      "allowEmailSubscriptions": true,
+      "subscriptionHeading": "Newsletter",
+      "subscriptionSubHeading": "Stay updated on network news."
+    }
+  ],
+  "footer": [
+    {
+      "copyright": "Copyright © 2018 Provide Technologies Inc. All rights reserved."
+    }
+  ]
+}

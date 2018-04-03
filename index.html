@@ -7,7 +7,7 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
         <!-- SEO meta tags -->
         <meta property="og:title" content="provide.network" />
@@ -40,10 +40,36 @@
     <body id="binding-wrapper" data-spy="scroll" data-target="#navbar" data-offset="30">
         <div class="navigation fixed-top">
             <div class="container">
+                <div class="row mobile-tophat flex-row">
+                    <div class="col-md-12 d-flex">
+                        <div class="tophat-block d-flex flex-row align-items-center">
+                            <i class="icon-block"></i>
+                            <div class="wrapper">
+                                <p class="mobile-top-text" data-bind="text: tophat1Text"></p>
+                                <p data-bind="text: block"></p>
+                            </div>
+                        </div>
+                        <div class="tophat-block d-flex flex-row align-items-center">
+                            <i class="icon-time"></i>
+                            <div class="wrapper">
+                                <p class="mobile-top-text" data-bind="text: tophat2Text"></p>
+                                <p data-bind="text: lastBlock"></p>
+                            </div>
+                        </div>
+                        <div class="tophat-block d-flex flex-row align-items-center">
+                            <i class="icon-gas"></i>
+                            <div class="wrapper">
+                                <p class="mobile-top-text" data-bind="text: tophat3Text"></p>
+                                <p data-bind="text: avgTime"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-12">
                         <nav class="navbar navbar-dark navbar-expand-lg">
-                            <a class="navbar-brand" href="/">
+                            <a class="navbar-brand" href="#top">
                                 <img src="img/provide-lg.png" class="img-fluid" alt="provide logo"> 
                                 <span>provide.network</span>
                             </a> 
@@ -51,6 +77,32 @@
                                 <span class="navbar-toggler-icon"></span> 
                             </button>
                             <div class="collapse navbar-collapse" id="navbar">
+                                <div class="row tophat flex-row">
+                                    <div class="col-md-12 d-flex">
+                                        <div class="tophat-block d-flex flex-row align-items-center">
+                                            <i class="icon-block"></i>
+                                            <div class="wrapper">
+                                                <p class="mobile-top-text" data-bind="text: tophat1Text"></p>
+                                                <p data-bind="text: block"></p>
+                                            </div>
+                                        </div>
+                                        <div class="tophat-block d-flex flex-row align-items-center">
+                                            <i class="icon-time"></i>
+                                            <div class="wrapper">
+                                                <p class="mobile-top-text" data-bind="text: tophat2Text"></p>
+                                                <p data-bind="text: lastBlock"></p>
+                                            </div>
+                                        </div>
+                                        <div class="tophat-block d-flex flex-row align-items-center">
+                                            <i class="icon-gas"></i>
+                                            <div class="wrapper">
+                                                <p class="mobile-top-text" data-bind="text: tophat3Text"></p>
+                                                <p data-bind="text: avgTime"></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                                 <ul class="navbar-nav ml-auto" data-bind="foreach: navLinks">
                                     <li class="nav-item">
                                         <a class="nav-link active" data-bind="text: $data.text, attr: { href: $data.href, class: $data.class }"></a> 
