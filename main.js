@@ -48,6 +48,11 @@ $(function(){
        scrolled();
     });
 
+    $("#toggleNav").on("click", function(){
+        $("#toggleNav").toggleClass("is-active");
+    });
+
+
     ko.bindingHandlers.fadeVisible = {
         init: function (element, valueAccessor) {
             // Initially set the element to be instantly visible/hidden depending on the value

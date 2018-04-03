@@ -10,11 +10,19 @@
 @import url("slick.less");
 @import url("slick-theme.less");
 @import url("fonts.less");
+@import url("hamburgers.less");
 footer{
   background-color: rgba(4,45,64,0.25);
   padding: 2rem 0rem;
 
   p{
     margin-bottom: 0;
+  }
+}
+.hamburger-box{
+  width: 30px;
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after, .hamburger-inner:active{
+    width: 30px;
+    background-color: #fff;
   }
 }
