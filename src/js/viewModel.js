@@ -222,33 +222,61 @@ $(function() {
         }
 
         ns.stats = ko.observableArray();
-        ns.tophat1Text = ko.observable("Best Block");
-        ns.block = ko.observable();
-        ns.tophat2Text = ko.observable("Last Block");
-        ns.lastBlock = ko.observable();
-        ns.tophat3Text = ko.observable("Avg. Time");
-        ns.avgTime = ko.observable();
+        ns.blockLabel = ko.observable("Best Block");
+        ns.block = ko.observable('--');
+        ns.lastBlockLabel = ko.observable("Last Block");
+        ns.lastBlock = ko.observable('--');
+        ns.avgTimeLabel = ko.observable("Avg. Time");
+        ns.avgTime = ko.observable('--');
+        var statsInterval = null;
         ns.setStats = function(){
             var stats = ns.stats();
             ns.block(stats.block);
-            ns.lastBlock(((stats.last_block_timestamp / 1000) + "s ago"));
-            ns.avgTime(((stats.avg_block_time / 1000) + "s"));
+            ns.avgTime(stats.avg_block_time + 's');
+
+            if (statsInterval) {
+                clearInterval(statsInterval);
+                statsInterval = null;
+            }
+            var startTick = new Date().getTime() - stats.last_block_timestamp;
+            var tick = function() {
+                var lastBlock = ((new Date().getTime() / 1000) - (startTick / 1000)).toFixed(0);
+                ns.lastBlock(lastBlock + 's ago');
+            }
+            tick();
+            statsInterval = setInterval(tick, 1000);
         }
 
         var init = function() {
             grabJSON().then(function(data) {
                 ns.data(data);
                 ns.setView();
-                grabStats().then(function(data){
-                    ns.stats(data);
-                    ns.setStats();
-                    ns.slickifyEvents();
-                    ns.smoothScrollEnable();
-                }, function(){
 
-                });
+                var connectWebsocket = function() {
+                    var ws = new WebSocket('wss://unicorn-stats.provide.network/primus/?_primuscb=' + new Date().getTime() + '-0');
+                    ws.onopen = function() {
+                        console.log('socket opened');
+                    }
+                    ws.onclose = function() {
+                        connectWebsocket();
+                    }
+                    ws.onmessage = function(msg) {
+                        var _msg = JSON.parse(msg.data);
+                        if (_msg.action == 'charts') {
+                            ns.stats({
+                                block: _msg.data.height[_msg.data.height.length - 1],
+                                last_block_timestamp: _msg.data.blocktime[_msg.data.blocktime.length - 1].toFixed(0),
+                                avg_block_time: _msg.data.avgBlocktime.toFixed(1)
+                            });
+                            ns.setStats();
+                        }
+                    }
+                }
+                connectWebsocket();
+                
+                ns.slickifyEvents();
+                ns.smoothScrollEnable();
             }, function() {
-
 
             });
         };
