@@ -14,19 +14,6 @@ function grabJSON() {
     return $dfd.promise();
 }
 
-function grabStats(){
-    window.provide.Models.ViewModel.loading(true);
-    var url = "/js/testing.json";
-    var $dfd = new $.Deferred();
-    var data = {};
-    $.getJSON(url, data, function (result) {
-        $dfd.resolve(result);
-    }).fail(function (xhr) {
-        $dfd.reject(xhr);
-    });
-    return $dfd.promise();
-}
-
 function shouldRender(section) {
     return section != null && (typeof(section.enabled) == 'undefined' || section.enabled);
 }
@@ -273,7 +260,7 @@ $(function() {
                     }
                 }
                 connectWebsocket();
-                
+
                 ns.slickifyEvents();
                 ns.smoothScrollEnable();
             }, function() {
