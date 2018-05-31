@@ -76,10 +76,16 @@
       "subHeading" : "We hope to see you at one of these exciting community events.",
       "events": [
         {
+          "heading": "Provide @ CryptoNYC",
+          "subHeading": "Introducing a Modern Blockchain PaaS for Solidity Devs. <a target=\"_blank\" href=\"https://prvd-at-cryptonyc.eventbrite.com/?aff=providenetwork\">Tickets</a> are free.",
+          "imageUrl": "https://s3.amazonaws.com/provide.network/img/prvd-cryptonyc-introducing-a-modern-blockchain-paas-for-solidity-devs-at-flatiron-school.png",
+          "date": "June 11, 2018 at 6:30pm"
+        },
+        {
           "heading": "EthAtlanta",
           "subHeading" : "<a target=\"_blank\" href=\"https://ethatl.com\">Join us</a> in Atlanta for EthAtlanta, the enterprise blockchain hackathon.",
           "imageUrl": "https://s3.amazonaws.com/provide.network/img/ethatl-uniting-business-with-blockchain.png",
-          "date": "June 2018 (exact date TBA)"
+          "date": "Fall 2018"
         }
       ]
     }
