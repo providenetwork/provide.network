@@ -2,87 +2,24 @@
   "nav": [
     {
       "links": [
-        {
-          "text": "Mission",
-          "href": "#mission",
-          "class": "nav-link"
-        },
-        {
-          "text": "Network",
-          "href": "#network",
-          "class": "nav-link"
-        },
-        {
-          "text": "Events",
-          "href": "#events",
-          "class": "nav-link"
-        },
-        {
-          "text": "Join ICO",
-          "href": "https://",
-          "class": "btn btn-outline-light disabled"
-        }
+
       ]
     }
   ],
   "hero": [
     {
-      "mainHeading": "Enterprise-grade Blockchain Network",
-      "subHeading" : "Proof-of-authority network for enterprise use-cases."
+      "mainHeading": "Flagship Enterprise Blockchain Network",
+      "subHeading" : "provide.network is a highly-scalable enterprise-grade blockchain network, open-source commons and community collectively building upgradeable, interoperable network consensus protocols and DevOps tooling to reduce the technical barriers and costs associated with building a mainstream distributed ledger application."
     }
   ],
   "mission": [
-    {
-      "heading": "Our Mission",
-      "subHeading": "",
-      "highlights": [
-        {
-          "img": "https://s3.amazonaws.com/provide.network/img/prvd-oracle.png"
-        },
-        {
-         "heading": "Problem",
-         "detail": "Existing blockchain networks are unapproachable for building enterprise use-cases due to high technical barriers to entry and unpredictable cost."
-        },
-        {
-          "heading": "Mission",
-          "detail": "provide.network is a fast, reliable enterprise-class blockchain network built to help businesses of all sizes fully realize the disruptive potential of blockchain technology."
-        }
-      ]
-    }
+
   ],
   "about": [
-    {
-      "heading": "Network",
-      "subHeading": "",
-      "highlights": [
-        {
-         "heading": "Predictable block time",
-         "detail": "Proof-of-authority consensus allows for fast, predictable block times."
-        },
-        {
-          "heading": "Transparent governance",
-          "detail": "Highly-upgradeable on-chain consensus, governed by organizational validators."
-        },
-        {
-          "heading": "Blueprint for enterprise",
-          "detail": "Private provide.network sidechains can be deployed anywhere."
-        }
-      ]
-    }
+
   ],
   "events": [
-    {
-      "heading" : "Events",
-      "subHeading" : "We hope to see you at one of these exciting community events.",
-      "events": [
-        {
-          "heading": "EthAtlanta",
-          "subHeading" : "<a target=\"_blank\" href=\"https://ethatl.com\">Join us</a> in Atlanta for EthAtlanta, the enterprise blockchain hackathon.",
-          "imageUrl": "https://s3.amazonaws.com/provide.network/img/ethatl-uniting-business-with-blockchain.png",
-          "date": "September 21-23"
-        }
-      ]
-    }
+
   ],
   "cardViews": [],
   "team": [
@@ -128,14 +65,14 @@
       "mailto": "mailto:hello@provide.network",
       "phone": null,
       "tel": null,
-      "allowEmailSubscriptions": true,
-      "subscriptionHeading": "Newsletter",
-      "subscriptionSubHeading": "Stay updated on network news."
+      "allowEmailSubscriptions": false,
+      "subscriptionHeading": "",
+      "subscriptionSubHeading": ""
     }
   ],
   "footer": [
     {
-      "copyright": "Copyright © 2018 Provide Technologies Inc. All rights reserved."
+      "copyright": "Copyright © 2018 Provide Network Ltd. All rights reserved."
     }
   ]
 }

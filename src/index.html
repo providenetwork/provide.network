@@ -62,7 +62,6 @@
                                 <p class="mobile-top-text" data-bind="text: avgTimeLabel"></p>
                                 <p data-bind="text: avgTime"></p>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -70,8 +69,7 @@
                     <div class="col-md-12">
                         <nav class="navbar navbar-dark navbar-expand-lg">
                             <a class="navbar-brand" href="#top">
-                                <img src="img/provide-lg.png" class="img-fluid" alt="provide logo"> 
-                                <span>provide.network</span>
+                                <img src="img/provide-logo-white.png" class="img-fluid" alt="provide.network logo"> 
                             </a> 
                             <button id="toggleNav" class="navbar-toggler hamburger hamburger--spring" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="hamburger-box">
@@ -209,33 +207,8 @@
         </section>
         <!-- /ko -->
 
-        <!-- ko if: eventsSection -->
-        <section class="events" id="events">
-            <div class="container">
-                <div id="eventsCarousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner" data-bind="foreach: events">
-                        <div class="row d-flex align-items-center">
-                            <div class="col-12 col-lg-6">
-                                <img class="img-fluid" data-bind="attr:{src: $data.imageUrl}" />
-                            </div>
-                            <div class="col-12 col-lg-6">
-                                <div class="text-wrapper">
-                                    <h3 data-bind="text: $data.heading"></h3>
-                                    <p data-bind="html: $data.subHeading"></p>
-                                </div>
-                                <div class="text-wrapper">
-                                    <span class="strong" style="font-size: 0.85rem; font-weight: 800;" data-bind="html: $data.date"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- /ko -->
-
         <!-- ko if: teamSection -->
-        <section class="team" id="team">
+        <!-- <section class="team" id="team">
             <div class="container">
                 <div class="top">
                     <h4 data-bind="text: teamHeading"></h4>
@@ -256,17 +229,17 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- /ko -->
 
         <!-- ko if: allowEmailSubscriptions -->
-        <section class="contact d-flex align-items-center justify-content-center" id="contact">
+        <!-- <section class="contact d-flex align-items-center justify-content-center" id="contact">
             <div class="container">
                 <h2 data-bind="text: subscriptionHeading"></h2>
                 <h5 data-bind="text: subscriptionSubHeading"></h5>
                 <input type="text" id="stayConnectedInput" placeholder="Enter Your Email Address" /> <a href="#" class="btn btn-submit">SUBMIT</a>
             </div>
-        </section>
+        </section> -->
         <!-- /ko -->
 
         <!-- ko if: contactSection -->

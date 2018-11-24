@@ -89,10 +89,8 @@ section {
 }
 .navigation .navbar-brand img {
   max-width: 75px;
-  transition: max-width 0.4s;
 }
 .navigation .navbar-brand img.is-scrolling {
-  transition: max-width 0.4s;
   max-width: 35px;
 }
 @media (max-width: 500px) {
